@@ -1,121 +1,92 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+// App.jsx – layout shell, theme state, lazy-loaded sections + SEO
+import { useState, lazy, Suspense } from "react";
+import { HelmetProvider, Helmet } from "react-helmet-async";
+import { Navbar } from "./components/layout/Navbar";
+import { Footer } from "./components/layout/Footer";
+import { meta } from "./data/portfolioConfig";
 
-function App() {
-  const [count, setCount] = useState(0)
+// Eager load hero & about (above the fold)
+import Hero from "./sections/Hero";
+import About from "./sections/About";
 
+// Lazy load below-fold sections
+const Education = lazy(() => import("./sections/Education"));
+const Skills = lazy(() => import("./sections/Skills"));
+const Projects = lazy(() => import("./sections/Projects"));
+const BeyondCode = lazy(() => import("./sections/BeyondCode"));
+const Achievements = lazy(() => import("./sections/Achievements"));
+const Contact = lazy(() => import("./sections/Contact"));
+
+function SectionFallback() {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+    <div className="flex items-center justify-center py-24" aria-hidden>
+      <div
+        className="w-8 h-8 rounded-full border-2 border-[var(--color-primary)] border-t-transparent animate-spin"
+      />
+    </div>
+  );
 }
 
-export default App
+export default function App() {
+  const [theme, setTheme] = useState("dark");
+
+  const toggleTheme = () => {
+    const next = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    document.documentElement.setAttribute("data-theme", next);
+  };
+
+  return (
+    <HelmetProvider>
+      <Helmet>
+        <title>{meta.name} – {meta.title}</title>
+        <meta name="description" content={meta.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content={`${meta.name} – ${meta.title}`} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:image" content={meta.ogImage} />
+        <meta property="og:url" content={meta.url} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${meta.name} – ${meta.title}`} />
+        <meta name="twitter:description" content={meta.description} />
+        <link rel="canonical" href={meta.url} />
+      </Helmet>
+
+      {/* Skip link for accessibility */}
+      <a href="#main-content" className="skip-to-main">
+        Skip to main content
+      </a>
+
+      <Navbar theme={theme} toggleTheme={toggleTheme} />
+
+      <main id="main-content" tabIndex={-1}>
+        {/* Above the fold – eager */}
+        <Hero />
+        <About />
+
+        {/* Below the fold – lazy */}
+        <Suspense fallback={<SectionFallback />}>
+          <Education />
+        </Suspense>
+        <Suspense fallback={<SectionFallback />}>
+          <Skills />
+        </Suspense>
+        <Suspense fallback={<SectionFallback />}>
+          <Projects />
+        </Suspense>
+        <Suspense fallback={<SectionFallback />}>
+          <BeyondCode />
+        </Suspense>
+        <Suspense fallback={<SectionFallback />}>
+          <Achievements />
+        </Suspense>
+        <Suspense fallback={<SectionFallback />}>
+          <Contact />
+        </Suspense>
+      </main>
+
+      <Footer />
+    </HelmetProvider>
+  );
+}

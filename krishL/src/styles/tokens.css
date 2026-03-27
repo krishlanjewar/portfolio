@@ -1,0 +1,89 @@
+/* ============================================================
+   tokens.css – Design system CSS variables
+   Light / Dark theme via data-theme on <html>
+   ============================================================ */
+
+:root,
+[data-theme="dark"] {
+  /* Background */
+  --color-bg: #0a0a0f;
+  --color-bg-alt: #111118;
+  --color-surface: #16161f;
+  --color-surface-2: #1e1e2a;
+  --color-surface-3: #252535;
+
+  /* Text */
+  --color-text: #f0f0f8;
+  --color-text-muted: #9090a8;
+  --color-text-subtle: #5a5a72;
+
+  /* Brand */
+  --color-primary: #8b5cf6;
+  --color-primary-light: #a78bfa;
+  --color-primary-dark: #6d28d9;
+  --color-accent: #f59e0b;
+  --color-accent-light: #fbbf24;
+
+  /* UI */
+  --color-border: rgba(139, 92, 246, 0.18);
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --color-glow: rgba(139, 92, 246, 0.35);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #8b5cf6, #ec4899);
+  --gradient-accent: linear-gradient(135deg, #f59e0b, #ef4444);
+  --gradient-hero: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139,92,246,0.35) 0%, transparent 70%);
+
+  /* Spacing */
+  --section-py: 6rem;
+  --container-max: 1200px;
+
+  /* Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 2rem;
+
+  /* Shadows */
+  --shadow-glow: 0 0 40px rgba(139, 92, 246, 0.25);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 8px 40px rgba(0, 0, 0, 0.6);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.4s ease;
+
+  /* Typography */
+  --font-display: "Syne", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+[data-theme="light"] {
+  --color-bg: #f8f7ff;
+  --color-bg-alt: #f0eeff;
+  --color-surface: #ffffff;
+  --color-surface-2: #f3f0ff;
+  --color-surface-3: #ebe6ff;
+
+  --color-text: #1a1a2e;
+  --color-text-muted: #5a5a72;
+  --color-text-subtle: #9090a8;
+
+  --color-primary: #7c3aed;
+  --color-primary-light: #8b5cf6;
+  --color-primary-dark: #5b21b6;
+  --color-accent: #d97706;
+  --color-accent-light: #f59e0b;
+
+  --color-border: rgba(124, 58, 237, 0.15);
+  --color-border-subtle: rgba(0, 0, 0, 0.06);
+  --color-glow: rgba(124, 58, 237, 0.2);
+
+  --gradient-hero: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(124,58,237,0.15) 0%, transparent 70%);
+
+  --shadow-glow: 0 0 40px rgba(124, 58, 237, 0.15);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.1);
+  --shadow-elevated: 0 8px 40px rgba(0, 0, 0, 0.15);
+}

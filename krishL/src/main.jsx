@@ -1,10 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+// main.jsx
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./styles/globals.css";
+import App from "./App.jsx";
 
-createRoot(document.getElementById('root')).render(
+const root = document.getElementById("root");
+document.documentElement.setAttribute("data-theme", "dark");
+
+createRoot(root).render(
   <StrictMode>
     <App />
-  </StrictMode>,
-)
+  </StrictMode>
+);
