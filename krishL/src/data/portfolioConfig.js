@@ -12,14 +12,14 @@ export const meta = {
     "Personal portfolio of Krish Lanjewar – a passionate App Developer specialising in Flutter, Android, and Web applications.",
   url: "https://krishlanjewar.dev",
   ogImage: "/og-image.webp",
-  email: "krishlanjewar@example.com",
+  email: "lanjewarkrish07@gmail.com",
   phone: "+91 98765 43210",
   location: "Nagpur, Maharashtra, India",
 };
 
 export const social = {
   github: "https://github.com/krishlanjewar",
-  linkedin: "https://linkedin.com/in/krishlanjewar",
+  linkedin: "https://www.linkedin.com/in/krish-lanjewar",
   instagram: "https://instagram.com/krishlanjewar",
 };
 

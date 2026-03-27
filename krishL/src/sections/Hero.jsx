@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, Download, Briefcase } from "lucide-react";
 import { Button } from "../components/ui/Button";
 import { hero, meta } from "../data/portfolioConfig";
-import krishPhoto from "../assets/hero.png";
+import krishPhoto from "../assets/krish photo.png";
 
 function useTypewriter(words, speed = 80, pause = 1800) {
   const [text, setText] = useState("");

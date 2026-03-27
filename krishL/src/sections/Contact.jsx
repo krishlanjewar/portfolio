@@ -6,7 +6,7 @@ import { SectionWrapper, SectionHeading } from "../components/layout/SectionWrap
 import { Button } from "../components/ui/Button";
 import { useContactForm } from "../hooks/useForm";
 import { meta, social } from "../data/portfolioConfig";
-import krishPhoto from "../assets/hero.png";
+import krishPhoto from "../assets/krish photo.png";
 
 const socials = [
   { href: social.linkedin, Icon: LinkedinIcon, label: "LinkedIn", color: "#0A66C2" },
