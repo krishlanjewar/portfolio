@@ -84,11 +84,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-black leading-none tracking-tight mb-4"
+            className="text-5xl sm:text-6xl md:text-5xl lg:text-[4rem] xl:text-[4.5rem] font-black leading-none tracking-tight mb-4"
             style={{ fontFamily: "var(--font-display)" }}
           >
             <span className="block text-[var(--color-text)]">KRISH</span>
-            <span className="block gradient-text">LANJEWAR</span>
+            <span className="block gradient-text pr-4 w-fit overflow-visible">LANJEWAR</span>
           </motion.h1>
 
           {/* Typewriter */}
@@ -122,12 +122,11 @@ export default function Hero() {
               {hero.cta.primary.label}
             </Button>
             <Button
-              as="a"
-              href={hero.cta.secondary.href}
+              as="button"
+              onClick={() => window.print()}
               variant="outline"
               size="lg"
-              download
-              aria-label="Download my resume"
+              aria-label="Print or Download my resume"
             >
               <Download size={18} aria-hidden />
               {hero.cta.secondary.label}
@@ -179,7 +178,7 @@ export default function Hero() {
                 width={320}
                 height={448}
                 loading="eager"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover scale-[1.8] origin-[50%_15%]"
               />
             </div>
 

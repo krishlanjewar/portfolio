@@ -1,0 +1,42 @@
+/* =========================================================
+   Print styles (make it easy to read when printed as a resume)
+   ========================================================= */
+@media print {
+  body, :root, [data-theme="dark"] {
+    background: white !important;
+    color: black !important;
+  }
+  
+  /* Hide elements that don't need to be printed (like navbar, floating buttons, etc) */
+  header, nav, .skip-to-main, #contact form, button[aria-label="Switch to dark mode"], button[aria-label="Switch to light mode"], 
+  button[aria-label="Print or Download my resume"],
+  a[aria-label="Scroll to About section"] {
+    display: none !important;
+  }
+
+  /* Remove backgrounds from glass or elevated elements */
+  .glass, .section, .container, .rounded-3xl, .rounded-2xl {
+    background: transparent !important;
+    border-color: #ddd !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    color: black !important;
+  }
+
+  /* Ensure text is black */
+  p, h1, h2, h3, h4, h5, h6, span, div, a {
+    color: black !important;
+    -webkit-text-fill-color: black !important;
+  }
+
+  /* Make links visible */
+  a {
+    text-decoration: underline;
+  }
+
+  /* Prevent page breaks inside cards */
+  .grid > * {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}

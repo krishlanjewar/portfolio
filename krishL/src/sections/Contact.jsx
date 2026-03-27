@@ -68,7 +68,7 @@ export default function Contact() {
               width={256}
               height={320}
               loading="lazy"
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-cover scale-[2.0] origin-[50%_15%]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)]/60 to-transparent" />
           </div>

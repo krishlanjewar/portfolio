@@ -13,7 +13,7 @@ export const meta = {
   url: "https://krishlanjewar.dev",
   ogImage: "/og-image.webp",
   email: "lanjewarkrish07@gmail.com",
-  phone: "+91 98765 43210",
+  phone: "+91 7410509989",
   location: "Nagpur, Maharashtra, India",
 };
 
@@ -28,7 +28,7 @@ export const hero = {
   show: true,
   greeting: "Hello, I'm",
   name: "Krish Lanjewar",
-  roles: ["App Developer", "Flutter Dev", "Android Dev", "UI/UX Enthusiast"],
+  roles: ["Flutter Developer", "Frontend Developer", "App Developer", "Tech Enthusiast"],
   cta: {
     primary: { label: "View Projects", href: "#projects" },
     secondary: { label: "Download Resume", href: "/resume.pdf" },
@@ -39,15 +39,15 @@ export const hero = {
 export const about = {
   show: true,
   bio: [
-    "I'm a passionate App Developer with hands-on experience building high-performance mobile and web applications using Flutter, Android (Kotlin/Java), and React.",
-    "I love translating complex ideas into elegant, user-friendly interfaces — combining clean code architecture with pixel-perfect designs.",
-    "Currently pursuing my B.Tech at G.H. Raisoni Institute of Engineering and Technology, Nagpur, where I balance academic excellence with real-world open-source contributions.",
+    "Flutter Developer with practical experience in cross-platform mobile app development, Flutter UI, Supabase backend integration, authentication, database management, and state management.",
+    "Seeking to build and scale real-world applications while continuously expanding my skill set to grow as a full-stack mobile developer.",
+    "Driven by the passion to solve problems and create user-friendly designs, I maintain a strong focus on clean architecture, API-first integrations, and highly responsive screen designs."
   ],
   stats: [
     { label: "Projects", value: 10, suffix: "+" },
-    { label: "Technologies", value: 15, suffix: "+" },
-    { label: "Months Exp.", value: 18, suffix: "+" },
-    { label: "Commits", value: 500, suffix: "+" },
+    { label: "Active Users", value: 10, suffix: "+" },
+    { label: "Daily Scans", value: 500, suffix: "+" },
+    { label: "App ROI", value: 94, suffix: "%" },
   ],
 };
 
@@ -56,26 +56,12 @@ export const education = {
   show: true,
   items: [
     {
-      degree: "B.Tech – Computer Science",
-      institution: "G.H. Raisoni Institute of Engineering and Technology",
+      degree: "B.Tech in Computer Engineering",
+      institution: "St. Vincent Pallotti College of Engineering and Technology",
       location: "Nagpur, MH",
-      period: "2022 – 2026",
-      grade: "CGPA: 8.2",
-    },
-    {
-      degree: "HSC – Science (PCM)",
-      institution: "Nagpur Junior College",
-      location: "Nagpur, MH",
-      period: "2020 – 2022",
-      grade: "88.4%",
-    },
-    {
-      degree: "SSC",
-      institution: "Delhi Public School",
-      location: "Nagpur, MH",
-      period: "2019 – 2020",
-      grade: "91.6%",
-    },
+      period: "2024 – 2028",
+      grade: "CGPA: 8.0/10.0",
+    }
   ],
 };
 
@@ -84,33 +70,39 @@ export const skills = {
   show: true,
   categories: [
     {
-      category: "Mobile",
-      icon: "Smartphone",
+      category: "Languages",
+      icon: "Code2",
       items: [
-        { name: "Flutter / Dart", level: 90 },
-        { name: "Android (Kotlin)", level: 80 },
-        { name: "Firebase", level: 85 },
-        { name: "Riverpod", level: 78 },
+        { name: "Java", level: 80 },
+        { name: "Python", level: 85 },
+        { name: "Dart", level: 90 },
       ],
     },
     {
-      category: "Web",
-      icon: "Globe",
+      category: "Frontend",
+      icon: "Layout",
       items: [
-        { name: "React.js", level: 82 },
-        { name: "JavaScript (ES6+)", level: 85 },
-        { name: "HTML / CSS", level: 90 },
-        { name: "Tailwind CSS", level: 80 },
+        { name: "Flutter", level: 90 },
+        { name: "HTML5", level: 95 },
+        { name: "CSS3", level: 85 },
       ],
     },
     {
-      category: "Backend & Tools",
-      icon: "Wrench",
+      category: "Database & Backend",
+      icon: "Database",
       items: [
-        { name: "Node.js", level: 65 },
-        { name: "REST APIs", level: 80 },
-        { name: "Git / GitHub", level: 88 },
-        { name: "Figma", level: 72 },
+        { name: "PostgreSQL", level: 75 },
+        { name: "Supabase", level: 85 },
+        { name: "State Mgt. (Riverpod/Hive)", level: 85 },
+      ],
+    },
+    {
+      category: "Cloud & DevOps",
+      icon: "Cloud",
+      items: [
+        { name: "Docker", level: 70 },
+        { name: "Git", level: 85 },
+        { name: "GitHub", level: 90 },
       ],
     },
   ],
@@ -121,20 +113,20 @@ export const experience = {
   show: true,
   items: [
     {
-      role: "Flutter Developer Intern",
-      company: "TechStart Solutions",
-      period: "Jun 2024 – Dec 2024",
+      role: "Flutter App Developer Intern",
+      company: "Finvise",
+      period: "Feb 2026 - April 2026 • Hybrid, India",
       description:
-        "Built cross-platform mobile features using Flutter & Firebase; reduced app crash rate by 40%.",
-      tags: ["Flutter", "Firebase", "Dart"],
+        "Built scalable Flutter applications using Riverpod for state management. Designed feature-based architectures improving code modularity and maintainability. Integrated Supabase for authentication and database operations.",
+      tags: ["Flutter", "Riverpod", "Supabase"],
     },
     {
-      role: "Android Instructor",
-      company: "GHRIEIT – Tech Club",
-      period: "Jan 2024 – May 2024",
+      role: "Flutter App Developer Intern",
+      company: "UptoSkills",
+      period: "Dec 2025 - Feb 2026 • Online, India",
       description:
-        "Conducted hands-on Android development workshops for 60+ students; developed lab exercises.",
-      tags: ["Android", "Kotlin", "Teaching"],
+        "Built responsive Flutter mobile applications with reusable components. Integrated Supabase for user authentication and implemented offline-first functionality using Hive and SharedPreferences.",
+      tags: ["Flutter", "Supabase", "Hive", "SharedPreferences"],
     },
   ],
 };
@@ -145,74 +137,26 @@ export const projects = {
   items: [
     {
       id: 1,
-      title: "FinVise",
+      title: "Safe Eat",
       category: "Mobile",
       description:
-        "A feature-rich personal finance app with crypto tracking, SIP calculators, and offline authentication built with Flutter and Firebase.",
-      thumbnail: "/projects/finvise.webp",
+        "Cross-platform app that helps users understand food ingredients in simple language. Includes allergen detection and emergency features. Processes 500+ product scans daily with ~200ms REST latency.",
+      thumbnail: "/projects/safeeat.webp",
       color: "#F59E0B",
-      tags: ["Flutter", "Firebase", "Riverpod", "CoinGecko API"],
-      github: "https://github.com/krishlanjewar/finvise",
+      tags: ["Flutter", "Supabase", "Open Food API"],
+      github: "https://github.com/krishlanjewar",
       live: null,
     },
     {
       id: 2,
-      title: "MetroMate",
-      category: "Mobile",
-      description:
-        "Smart metro navigation app for Nagpur metro with real-time schedules, route planner, and fare calculator.",
-      thumbnail: "/projects/metromate.webp",
-      color: "#3B82F6",
-      tags: ["Flutter", "Google Maps API", "Dart"],
-      github: "https://github.com/krishlanjewar/metromate",
-      live: null,
-    },
-    {
-      id: 3,
-      title: "SiRNA Platform",
-      category: "Web",
-      description:
-        "A research-grade bioinformatics web portal for siRNA sequence design, off-target analysis, and visualisation.",
-      thumbnail: "/projects/sirna.webp",
-      color: "#8B5CF6",
-      tags: ["React", "Python (Flask)", "BioPython"],
-      github: "https://github.com/krishlanjewar/sirna",
-      live: "https://sirna.krishlanjewar.dev",
-    },
-    {
-      id: 4,
-      title: "Safe Rail",
-      category: "Mobile",
-      description:
-        "Women-safety railway app with SOS alerts, live location sharing, and emergency contact management.",
-      thumbnail: "/projects/saferail.webp",
-      color: "#EC4899",
-      tags: ["Flutter", "Firebase", "Google Maps"],
-      github: "https://github.com/krishlanjewar/saferail",
-      live: null,
-    },
-    {
-      id: 5,
-      title: "PlotPlan",
-      category: "Web",
-      description:
-        "Real-estate plot booking and management portal with interactive maps, payment tracking and admin dashboard.",
-      thumbnail: "/projects/plotplan.webp",
-      color: "#10B981",
-      tags: ["React", "Node.js", "MongoDB"],
-      github: "https://github.com/krishlanjewar/plotplan",
-      live: "https://plotplan.krishlanjewar.dev",
-    },
-    {
-      id: 6,
-      title: "AI Study Buddy",
+      title: "Mental Health AI",
       category: "AI",
       description:
-        "LLM-powered study assistant that generates quizzes, summarises PDFs, and tracks learning progress.",
-      thumbnail: "/projects/aistudybuddy.webp",
-      color: "#06B6D4",
-      tags: ["React", "OpenAI API", "Firebase"],
-      github: "https://github.com/krishlanjewar/ai-study-buddy",
+        "Intelligent Mental Health Assistant using NLP to analyze user emotions and provide personalized coping suggestions. Integrated Gemini API for real-time conversational responses with context-aware sentiment analysis.",
+      thumbnail: "/projects/mentalhealth.webp",
+      color: "#8B5CF6",
+      tags: ["Flutter", "Supabase", "Gemini API"],
+      github: "https://github.com/krishlanjewar",
       live: null,
     },
   ],
@@ -237,54 +181,23 @@ export const beyondCode = {
 // Achievements section
 export const achievements = {
   show: true,
-  heading: "Achievements Wall",
-  subheading: "Milestones I'm proud of.",
+  heading: "Certifications & Achievements",
+  subheading: "Continuous learning and competitive milestones.",
   items: [
     {
       id: 1,
-      icon: "Trophy",
+      icon: "Award",
       color: "#F59E0B",
-      title: "Smart India Hackathon 2024",
-      description: "Qualified for SIH 2024 Grand Finale representing college.",
+      title: "HTML Certified",
+      description: "Certified by UptoSkills HTML program.",
     },
     {
       id: 2,
-      icon: "Star",
+      icon: "Trophy",
       color: "#8B5CF6",
-      title: "Best Final Year Project",
+      title: "Game Development",
       description:
-        "Awarded Best Project at department level for the FinVise app.",
-    },
-    {
-      id: 3,
-      icon: "Award",
-      color: "#3B82F6",
-      title: "Google Developer Student Club",
-      description: "Core technical member and Flutter lead at GDSC GHRIEIT.",
-    },
-    {
-      id: 4,
-      icon: "BookOpen",
-      color: "#10B981",
-      title: "Research Paper Published",
-      description:
-        "Published paper on siRNA computational analysis in a UGC-approved journal.",
-    },
-    {
-      id: 5,
-      icon: "Zap",
-      color: "#EC4899",
-      title: "Open Source Contributor",
-      description:
-        "500+ commits across GitHub; contributed to 3 open-source Flutter plugins.",
-    },
-    {
-      id: 6,
-      icon: "Users",
-      color: "#06B6D4",
-      title: "Workshop Facilitator",
-      description:
-        "Trained 60+ students in Android & Flutter development across two semesters.",
+        "Secured Second Prize in gamathon for building a functional game using Unity.",
     },
   ],
 };
